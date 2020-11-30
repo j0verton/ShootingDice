@@ -12,7 +12,7 @@ namespace ShootingDice
         public override int Roll()
         {
             int roll = new Random().Next(DiceSize) + 1;
-            Console.WriteLine(Taunt);
+            Console.WriteLine($"{Name} shout '{Taunt}'");
             return roll;
         }
 
