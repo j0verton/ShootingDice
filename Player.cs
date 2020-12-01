@@ -21,7 +21,7 @@ namespace ShootingDice
             DeclareWinner(this, myRoll, other, otherRoll);
         }
 
-        public void DeclareWinner(Player player1, int roll1, Player player2, int roll2)
+        public virtual void DeclareWinner(Player player1, int roll1, Player player2, int roll2)
         {
             Console.WriteLine($"{player1.Name} rolls a {roll1}");
             Console.WriteLine($"{player2.Name} rolls a {roll2}");
