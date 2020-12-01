@@ -7,9 +7,12 @@ namespace ShootingDice
     public class CreativeSmackTalkingPlayer : SmackTalkingPlayer
     {
 
-        List<string> Taunts = new List<string>
+        private List<string> Taunts = new List<string>
         {
-        "Take that!", "How'd ya like them apples!!", "How'd ya like me now?!", "BOOYAH!!!!", "Givin ya the BUSINESS!"
+        "Take that!", "How'd ya like them apples!!",
+        "How'd ya like me now?!",
+        "BOOYAH!!!!",
+        "Givin ya the BUSINESS!"
         };
 
         public override string Taunt
@@ -19,9 +22,6 @@ namespace ShootingDice
                 int index = new Random().Next(Taunts.Count);
                 return Taunts[index];
             }
-
-
-
         }
     }
 }

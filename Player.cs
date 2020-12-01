@@ -18,22 +18,27 @@ namespace ShootingDice
             // Call roll for "this" object and for the "other" object
             int myRoll = Roll();
             int otherRoll = other.Roll();
+            DeclareWinner(this, myRoll, other, otherRoll);
+        }
 
-            Console.WriteLine($"{Name} rolls a {myRoll}");
-            Console.WriteLine($"{other.Name} rolls a {otherRoll}");
-            if (myRoll > otherRoll)
+        public void DeclareWinner(Player player1, int roll1, Player player2, int roll2)
+        {
+            Console.WriteLine($"{player1.Name} rolls a {roll1}");
+            Console.WriteLine($"{player2.Name} rolls a {roll2}");
+            if (roll1 > roll2)
             {
-                Console.WriteLine($"{Name} Wins!");
+                Console.WriteLine($"{player1.Name} Wins!");
             }
-            else if (myRoll < otherRoll)
+            else if (roll1 < roll2)
             {
-                Console.WriteLine($"{other.Name} Wins!");
+                Console.WriteLine($"{player2.Name} Wins!");
             }
             else
             {
                 // if the rolls are equal it's a tie
                 Console.WriteLine("It's a tie");
             }
+
         }
     }
 }
