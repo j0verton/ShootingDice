@@ -35,12 +35,18 @@ namespace ShootingDice
             Player player4 = new SoreLoserPlayer();
             player4.Name = "Chad";
 
+            Player player5 = new UpperHalfPlayer();
+            player5.Name = "Steve";
+
+            Player player6 = new SoreLoserUpperHalfPlayer();
+            player6.Name = "Jeff";
+
             player4.Play(player1);
-            player4.Play(player2);
-            player4.Play(player3);
+            player5.Play(player2);
+            player6.Play(player2);
 
             List<Player> players = new List<Player>() {
-                player1, player2, player3, player4, large
+                player1, player2, player3, player4, player5, player6, large
             };
 
             PlayMany(players);
